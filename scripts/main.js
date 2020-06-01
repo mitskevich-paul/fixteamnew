@@ -23,11 +23,15 @@ request.addEventListener('click', () => {
         align-items: center;
         position: fixed;
         width: 100%;
-        height: 80vh;
+        height: 85%;
         top: 10vh;
         background: white;
         z-index: 1000;
         border-radius: 50px;
+        background: url("./sources/wp-phone.jpg");
+        background-color: black;
+        background-size: contain;
+        background-repeat: no-repeat;
     `
     document.querySelector('.fixed-menu').appendChild(list);
 
@@ -43,6 +47,7 @@ request.addEventListener('click', () => {
         font-size: 25px;
         text-align: center;
         margin-top: 30px;
+        color: white;
     `;
     form.appendChild(nummerText);
 
@@ -65,6 +70,7 @@ request.addEventListener('click', () => {
         font-size: 25px;
         text-align: center;
         margin-top: 30px;
+        color: white;
     `;
     form.appendChild(nameText);
 
@@ -105,9 +111,10 @@ request.addEventListener('click', () => {
         height: 50px;
         margin: auto;
         background: url("./sources/logout.png");
+        background-color: white;
         background-size: contain;
         border: none;
-        border-radius: 15px;
+        border-radius: 100px;
     `   
     list.appendChild(close);
     close.addEventListener('click', () => {
