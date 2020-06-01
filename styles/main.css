@@ -1,5 +1,4 @@
 @import url("./reset.css");
-
 body {
     overflow-x: hidden;
 }
@@ -19,7 +18,9 @@ body {
 .menu-links,
 .menu-logo,
 .menu-number {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 400px;
     height: 100%;
 }
@@ -30,7 +31,7 @@ body {
     justify-content: space-around;
 }
 .menu-links a,
-.menu-number span {
+.menu-number a {
     font-size: 20px;
     color: black;
     font-weight: 600;
@@ -232,7 +233,7 @@ h2 {
     transform: scale(0.9);
 }
 .wr-how_we_work {
-    height: 100vh;
+    height: 900px;
 }
 .phone-container {
     display: flex;
@@ -454,10 +455,11 @@ h2 {
 .wr-map {
     display: flex;
     flex-direction: row; 
+    height: 400px;
 }
 .wr-map iframe {
     width: 50%;
-    height: 50vh;
+    height: 400px;
 }
 .wr-map_about {
     display: block;
@@ -488,4 +490,304 @@ footer a {
     text-decoration: none;
     text-align: center;
     line-height: 100px;
+}
+
+@media all and (max-height: 666px) {
+    h1 {
+        font-size: 38px;
+        padding-top: 150px;
+    }
+    .h1-pre_header {
+        font-size: 30px;
+        padding-top: 30px;
+    }
+    .header-buttons {
+        width: 100%;
+        padding-top: 80px;
+    }
+    .header-buttons button {
+        height: 50px;
+        font-size: 20px;
+    }
+}
+@media all and (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+    .menu-links,
+    .menu-number {
+        width: 30%;
+    }   
+    .menu-logo {
+        width: 200px;
+    }
+    h1 {
+        font-size: 33px;
+    }
+    .h1-pre_header {
+        font-size: 25px;
+    }
+    .wr-how_we_work {
+        height: fit-content;
+    }
+    .phone-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .how_we_work__phone-left,
+    .how_we_work__phone-right {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        display: block;
+        margin: auto;
+        height: fit-content;
+    }
+    .how_we_work__phone {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        display: block;
+        margin: auto;
+    }
+    .how_we_work__phone-left span,
+    .how_we_work__phone-left p {
+        text-align: start;
+        padding: 20px 0 0 0;
+        margin: 0;
+    }
+    .how_we_work__phone-left div:nth-child(1)::after {
+        top: 0;
+        left: -75px;
+    }
+    .how_we_work__phone-left div:nth-child(2)::after {
+        top: 0;
+        left: -75px;
+    }
+    .how_we_work__phone-left div:nth-child(3)::after {
+        top: 0;
+        left: -75px;
+    }
+    .wr-about_fix-team {
+        height: fit-content;
+    }
+    .about-fix__left-side {
+        height: 480px;
+        padding: 20px 0 20px;
+    }
+    .about-fix__right-side {
+        padding: 50px 0;
+        width: 80%;
+    }
+    .about-fix__right-side h2,
+    .about-fix__right-side p {
+        text-align: center;
+    }
+    .wr-about_fix-team .container {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 100%;
+    }
+}
+@media all and (max-width: 1070px) {
+    .wr-repear,
+    .devices {
+        height: fit-content;
+        padding-bottom: 20px;
+    }
+    .devices {
+        flex-direction: column;
+    }
+    .devices-phone,
+    .devices-tablet,
+    .devices-laptop {
+        margin-bottom: 20px;
+    }
+    .wr-map {
+        flex-direction: column; 
+        height: fit-content;
+    }
+    .wr-map iframe,
+    .wr-map_about {
+        width: 100%;
+    }
+}
+@media all and (max-width: 900px) {
+    .about-fix__left-side {
+        width: 100%;
+    }
+    .about-fix__left-side div:nth-child(1) {
+        left: 15%;
+    }
+    .about-fix__left-side div:nth-child(2) {
+        left: 55%;
+    }
+    .about-fix__left-side div:nth-child(3) {
+        left: 33%;
+    }
+    .wr-map_about {
+        padding: 0;
+    }
+    .wr-map_about h2,
+    .wr-map_about p {
+        padding-left: 30px;
+    }
+}
+@media all and (max-width: 830px) {
+    .phone-container {
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+    .how_we_work__phone-left, 
+    .how_we_work__phone-right {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .how_we_work__phone {
+        margin-top: 30px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .how_we_work__phone-left span,
+    .how_we_work__phone-right span,
+    .how_we_work__phone-left p,
+    .how_we_work__phone-right p {
+        text-align: center;
+        padding: 20px 0 0 0;
+        margin: 0;
+    }
+    .how_we_work__phone-left div:nth-child(1)::after,
+    .how_we_work__phone-left div:nth-child(2)::after,
+    .how_we_work__phone-left div:nth-child(3)::after {
+        left: 0;
+    }
+    .how_we_work__phone-right div:nth-child(1)::before,
+    .how_we_work__phone-right div:nth-child(2)::before,
+    .how_we_work__phone-right div:nth-child(3)::before {
+        top: 13px;
+        left: 0;
+    }
+    .qusetion-call_us {
+        font-size: 23px;
+    }
+    .qusetion-call_us__number {
+        width: 250px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 20px;
+    }
+}
+@media all and (max-width: 830px) { 
+    .menu-logo {
+        display: none;
+    }
+    .menu-links, 
+    .menu-number {
+        width: 50%;   
+    }
+    .wr-any_question {
+        height: 170px;
+    }
+    .qusetion-call_us {
+        height: 70px;
+        line-height: 70px;
+    }
+    .link-container {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .wr-how_we_work h2 {
+        padding: 50px 0 20px 0;
+    }
+}
+@media all and (max-width: 510px) {
+    .wr-map_about h2 {
+        font-size: 30px;
+    } 
+    .wr-map_about p {
+        font-size: 20px;
+        line-height: 40px;
+    }
+}
+@media all and (max-width: 500px) {
+    h1 {
+        font-size: 30px;
+    }
+    .h1-pre_header {
+        font-size: 22px;
+    }
+    .header-buttons button {
+        font-size: 17px;
+    }
+    h2 {
+        font-size: 26px;
+    }
+    .devices p {
+        font-size: 24px;
+    }
+    .devices span {
+        font-size: 18px;
+    }
+    .how_we_work__phone-left span, 
+    .how_we_work__phone-right span {
+        font-size: 22px;
+    }
+    .how_we_work__phone-left p,
+    .how_we_work__phone-right p {
+        font-size: 32px;
+        margin-top: 50px;
+    }
+    .how_we_work__phone-right div:nth-child(1)::before, 
+    .how_we_work__phone-right div:nth-child(2)::before, 
+    .how_we_work__phone-right div:nth-child(3)::before,
+    .how_we_work__phone-left div:nth-child(1)::after, 
+    .how_we_work__phone-left div:nth-child(2)::after, 
+    .how_we_work__phone-left div:nth-child(3)::after {
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .about-fix__left-side {
+        display: none;
+    }
+    .menu-links a, 
+    .menu-number a {
+        font-size: 16px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .menu-links a:nth-of-type(1) {
+        padding-right: 10px;
+    }
+    .devices-phone, 
+    .devices-tablet, 
+    .devices-laptop {
+        width: 300px;
+    }
+    .about-fix__right-side h2 {
+        font-size: 30px;
+    }
+    .about-fix__right-side p {
+        font-size: 25px;
+    }
+}
+@media all and (max-width: 420px) {
+    .wr-map_about h2, 
+    .wr-map_about p {
+        padding-left: 15px;
+    }
+    .wr-map_about p {
+        font-size: 17px;
+        line-height: 31px;
+    }
+}
+@media all and (max-width: 380px) {
+    h2 {
+        padding: 60px 0 20px 0;;
+    }
 }
