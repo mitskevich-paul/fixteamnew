@@ -262,6 +262,10 @@ h2 {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    transition: 2s;
+}
+.phone-screen:hover {
+    opacity: 0;
 }
 .how_we_work__phone-left,
 .how_we_work__phone-right {
