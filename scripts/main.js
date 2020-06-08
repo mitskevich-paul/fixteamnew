@@ -7,10 +7,15 @@
 let headerHeight = document.querySelector('.wr-header').offsetHeight;
 let clientHeight = window.pageYOffset - headerHeight;
 
-window.addEventListener('scroll', () => {
-    
+document.querySelector('.devices-phone').addEventListener('click', () => {
+    location.href = './phone.html';
 });
-
+document.querySelector('.devices-tablet').addEventListener('click', () => {
+    location.href = './tablet.html';
+});
+document.querySelector('.devices-laptop').addEventListener('click', () => {
+    location.href = './laptop.html';
+});
 let request = document.querySelector('.header-works');
 request.addEventListener('click', () => {
     request.disabled = true;
@@ -22,9 +27,11 @@ request.addEventListener('click', () => {
         justify-content: center;
         align-items: center;
         position: fixed;
-        width: 100%;
-        height: 85%;
-        top: 10vh;
+        width: 320px;
+        height: 460px;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
         background: white;
         z-index: 1000;
         border-radius: 50px;
@@ -48,6 +55,7 @@ request.addEventListener('click', () => {
         text-align: center;
         margin-top: 30px;
         color: white;
+        text-shadow: 3px 3px 3px black, -3px -3px 3px black;
     `;
     form.appendChild(nummerText);
 
@@ -71,6 +79,7 @@ request.addEventListener('click', () => {
         text-align: center;
         margin-top: 30px;
         color: white;
+        text-shadow: 3px 3px 3px black, -3px -3px 3px black;
     `;
     form.appendChild(nameText);
 
