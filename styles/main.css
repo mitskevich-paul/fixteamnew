@@ -7,17 +7,29 @@
     font-family: comf;
     src: url("../fonts/Comfortaa-VariableFont_wght.ttf");
 }
-
+@font-face {
+    font-family: sPro;
+    src: url("../fonts/SourceSansPro-Regular.ttf");
+}
+@font-face {
+    font-family: manrope;
+    src: url("../fonts/Manrope-VariableFont_wght.ttf");
+}
+a {
+    text-decoration: none;
+}
 body,
 a,
 p,
 span,
 button {
-    font-family: asf;
+    font-family: sPro;
 }
-h1,
+h1 {
+    font-family: manrope;
+}
 .h1-pre_header {
-    font-family: comf;
+    font-family: sPro;
 }
 body {
     overflow-x: hidden;
@@ -77,7 +89,7 @@ section {
 .wr-header {
     width: 100%;
     height: 100vh;
-    background: url("../sources/header-bg.jpg");
+    background: url("../sources/main.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -88,13 +100,35 @@ section {
     height: 700px;
     background-color: white;
 }
+.linkToPrices {
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    line-height: 60px;
+    background: rgba(100, 100, 100, 0.7);
+    opacity: 0.9;
+    text-transform: uppercase;
+}
+.linkToPrices:hover {
+    opacity: 1;
+}
+.linkToPrices:active {
+    transform: scale(0.9);
+}
 h1 {
     font-size: 45px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     text-align: center;
     font-weight: 600;
     color: white;
     padding-top: 250px;
+    letter-spacing: 2px;
     /*text-shadow: 3px 3px 3px black, -3px -3px 3px black;*/
 }
 h2 {
@@ -118,29 +152,36 @@ h2 {
     justify-content: center;
     align-items: center;
 }
-.header-buttons button {
+.header-works,
+.header-adress {
     width: 250px;
     height: 80px;
     border-radius: 20px;
-    border: 1px solid white;
+    border: 2px solid white;
     box-sizing: border-box;
     margin: 20px;
     font-size: 25px;
     /*text-shadow: 3px 3px 3px black, -3px -3px 3px black;*/
     opacity: 0.85;
     color: white;
+    text-align: center;
+    line-height: 80px;
+    cursor: pointer;
+    text-transform: uppercase;
 }
+.header-buttons a:hover,
 .header-buttons button:hover {
     opacity: 1;
 }
+.header-buttons a:active,
 .header-buttons button:active {
     transform: scale(0.9);
 }
 .header-adress {
-    background-color: rgba(255, 255, 255, 0.305);
+    background: rgba(100, 100, 100, 0.7);
 }
 .header-works {
-    background-color: rgba(0, 0, 255, 0.305);
+    background: rgba(100, 100, 100, 0.7);
 }
 .devices {
     width: 100%;
@@ -166,11 +207,12 @@ h2 {
 .devices-tablet,
 .devices-laptop {
     border: 1px solid rgba(0, 0, 0, 0.5);
-    box-sizing: border-box;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
-    height: 380px;
-    width: 320px;
+    height: 370px;
+    width: 310px;
+    padding: 10px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -529,9 +571,26 @@ footer a {
         width: 100%;
         padding-top: 80px;
     }
-    .header-buttons button {
+    .header-buttons button,
+    .header-buttons a,
+    .linkToPrices {
         height: 50px;
         font-size: 20px;
+        line-height: 50px;
+    }
+}
+@media all and (max-height: 600px) { 
+    h1 {
+        font-size: 24px;
+    }
+    .h1-pre_header {
+        font-size: 20px;
+    }
+    .header-buttons button,
+    .header-buttons a,
+    .linkToPrices {
+        height: 40px;
+        line-height: 40px;
     }
 }
 @media all and (max-width: 1200px) {
@@ -638,6 +697,13 @@ footer a {
     .wr-map_about {
         width: 100%;
     }
+    .wr-map_about {
+        padding: 0;
+    }
+    .wr-map_about h2,
+    .wr-map_about p {
+        padding-left: 30px;
+    }
 }
 @media all and (max-width: 900px) {
     .about-fix__left-side {
@@ -651,13 +717,6 @@ footer a {
     }
     .about-fix__left-side div:nth-child(3) {
         left: 33%;
-    }
-    .wr-map_about {
-        padding: 0;
-    }
-    .wr-map_about h2,
-    .wr-map_about p {
-        padding-left: 30px;
     }
 }
 @media all and (max-width: 830px) {
@@ -741,11 +800,17 @@ footer a {
 @media all and (max-width: 500px) {
     h1 {
         font-size: 30px;
+        padding-top: 130px;
     }
     .h1-pre_header {
         font-size: 22px;
     }
-    .header-buttons button {
+    .header-buttons {
+        padding-top: 60px;
+    }
+    .header-buttons button,
+    .header-buttons a,
+    .linkToPrices {
         font-size: 17px;
     }
     h2 {
@@ -801,6 +866,14 @@ footer a {
     }
 }
 @media all and (max-width: 420px) {
+    .header-buttons {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .header-works, 
+    .header-adress {
+        margin: 10px;
+    }
     .wr-map_about h2, 
     .wr-map_about p {
         padding-left: 15px;
@@ -813,5 +886,22 @@ footer a {
 @media all and (max-width: 380px) {
     h2 {
         padding: 60px 0 20px 0;;
+    }
+}
+@media all and (max-width: 320px) { 
+    h1 {
+        padding-top: 92px;
+    }
+    .h1-pre_header {
+        padding-top: 18px;
+    }
+    .header-buttons button,
+    .header-buttons a {
+        height: 40px;
+        line-height: 40px;
+    }
+    .linkToPrices {
+        height: 33px;
+        line-height: 33px;
     }
 }

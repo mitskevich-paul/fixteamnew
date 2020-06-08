@@ -1,0 +1,22 @@
+@media all and (max-height: 666px) {
+    h1 {
+        font-size: 38px;
+        padding-top: 150px;
+    }
+    h2 {
+        font-size: 17px;
+        padding: 80px 0 10px 0;
+    }
+    .h1-pre_header {
+        font-size: 30px;
+        padding-top: 30px;
+    }
+    .header-buttons {
+        width: 100%;
+        padding-top: 80px;
+    }
+    .header-buttons button {
+        height: 50px;
+        font-size: 20px;
+    }
+}
