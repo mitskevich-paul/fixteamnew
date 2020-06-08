@@ -108,7 +108,7 @@ section {
     border: 2px solid white;
     border-radius: 20px;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     color: white;
     line-height: 60px;
     background: rgba(100, 100, 100, 0.7);
@@ -573,11 +573,13 @@ footer a {
     }
     .header-buttons button,
     .header-buttons a,
+    .linkToPrices,
     .linkToPrices {
         height: 50px;
         font-size: 20px;
         line-height: 50px;
     }
+     
 }
 @media all and (max-height: 600px) { 
     h1 {
