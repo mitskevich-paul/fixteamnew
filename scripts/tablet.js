@@ -11,9 +11,11 @@ let alertas = (valueRepear) => {
         justify-content: center;
         align-items: center;
         position: fixed;
-        width: 100%;
-        height: 85%;
-        top: 10vh;
+        width: 320px;
+        height: 460px;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
         background: white;
         z-index: 1000;
         border-radius: 50px;
@@ -23,6 +25,17 @@ let alertas = (valueRepear) => {
         background-repeat: no-repeat;
     `
     document.querySelector('.fixed-menu').appendChild(list);
+
+    let back = document.createElement('div');
+    back.classList.add('listForm')
+    back.style.cssText = `
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 666;
+    `
+    document.querySelector('.fixed-menu').appendChild(back);
+
 
     let form = document.createElement('form');
     form.style.cssText = `
@@ -36,6 +49,7 @@ let alertas = (valueRepear) => {
         font-size: 25px;
         text-align: center;
         color: white;
+        text-shadow: 3px 3px 3px black, -3px -3px 3px black;
     `;
     form.appendChild(nummerText);
 
@@ -59,6 +73,7 @@ let alertas = (valueRepear) => {
         text-align: center;
         margin-top: 10px;
         color: white;
+        text-shadow: 3px 3px 3px black, -3px -3px 3px black;
     `;
     form.appendChild(nameText);
 
@@ -123,7 +138,7 @@ let alertas = (valueRepear) => {
     list.appendChild(close);
     close.addEventListener('click', () => {
         document.querySelector('.listForm').parentNode.removeChild(list);
-        document.querySelector('.header-works').disabled = false;
+        document.querySelector('.listForm').parentNode.removeChild(back);
     });
 }
 repearScreen.addEventListener('click', () => alertas(`Замена экрана планшета`));
