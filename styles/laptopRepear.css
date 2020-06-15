@@ -82,7 +82,7 @@ h1 {
     font-size: 35px;
     text-align: start;
     text-transform: uppercase;
-    margin: 35vh 0 10vh;
+    margin: 25vh 0 10vh;
     font-weight: 800;
 }
 .header-black {
@@ -166,9 +166,9 @@ section {
     border: 1px solid black;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    background: url("../sources/iphone_screen_repair.png");
+    background: url("../sources/OSsetypIcon.jpg");
+    background-size: 95%, contain;
     background-position: center top;
-    background-size: contain;
     background-repeat: no-repeat;
 }
 .phone-page_prices div:nth-child(2) {
@@ -186,9 +186,9 @@ section {
     border: 1px solid black;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    background: url("../sources/iphone_battery_repla.png");
+    background: url("../sources/POsetypIcon.jpg");
+    background-size: 95%, contain;
     background-position: center top;
-    background-size: contain;
     background-repeat: no-repeat;
 }
 .phone-page_prices div:nth-child(3) {
@@ -206,9 +206,9 @@ section {
     border: 1px solid black;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    background: url("../sources/iphone_charging_port.png");
+    background: url("../sources/CleanIcon.jpg");
+    background-size: 95%, contain;
     background-position: center top;
-    background-size: contain;
     background-repeat: no-repeat;
 }
 .phone-page_prices div:nth-child(4) {
@@ -226,9 +226,9 @@ section {
     border: 1px solid black;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    background: url("../sources/iphone_camera_repair.png");
+    background: url("../sources/BrokenLTIcon.jpg");
+    background-size: 95%, contain;
     background-position: center top;
-    background-size: contain;
     background-repeat: no-repeat;
 }
 .phone-page_prices div:nth-child(5) {
@@ -246,9 +246,9 @@ section {
     border: 1px solid black;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    background: url("../sources/iphone_back_glass_re.png");
+    background: url("../sources/brokenPCIcon.jpg");
+    background-size: 85%, contain;
     background-position: center top;
-    background-size: contain;
     background-repeat: no-repeat;
 }
 .phone-page_prices div:nth-child(6) {
@@ -266,9 +266,9 @@ section {
     border: 1px solid black;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    background: url("../sources/iphone_motherboard_r.png");
+    background: url("../sources/pcIcon.png");
+    background-size: 95%, contain;
     background-position: center top;
-    background-size: contain;
     background-repeat: no-repeat;
 }
 .wr-any_question {
