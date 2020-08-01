@@ -19,8 +19,8 @@ let alertas = (valueRepear) => {
         background: white;
         z-index: 1000;
         border-radius: 50px;
-        background: url("./sources/wp-phone.jpg");
-        background-color: black;
+        border: 1px black solid;
+        background-color: rgba(0,0,0,0.5);
         background-size: contain;
         background-repeat: no-repeat;
     `
